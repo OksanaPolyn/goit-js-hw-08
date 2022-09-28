@@ -1,5 +1,4 @@
 'use strict';
-
 import throttle from 'lodash.throttle';
 
 const form = document.querySelector('.feedback-form');
@@ -29,3 +28,4 @@ function onSubmitForm(e) {
     message.value = data.message;
   }
 })();
+
