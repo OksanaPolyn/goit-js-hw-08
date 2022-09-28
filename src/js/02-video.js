@@ -26,5 +26,5 @@ resumePlayback();
 
 
 
-//  ссылка с кодом 
+//  ссылка с кодом //
 //  https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror -->

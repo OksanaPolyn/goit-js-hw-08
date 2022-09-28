@@ -9,8 +9,8 @@ const listGallery = document.querySelector(`.gallery`) // возвр-т элем
 const makeListImg = createImage(galleryItems);    //викл ф-ю, робимо список картинок обращаясь из шаблона createImage к библиотеке galleryItems заполняем фактически                                              
 listGallery.insertAdjacentHTML('beforeend', makeListImg); //разбирает  текст как HTML/XML и вставляет полученные узлы (nodes)  
 
-function createImage(items) {                    //make шаблон element div 
-    return items.map (({preview, original, description}) =>{    // в тегу а змінили класс і прибирали  data-source="${original}"   
+function createImage(items) {                    //make шаблон element div //
+    return items.map (({preview, original, description}) =>{    // в тегу а змінили класс і прибирали  data-source="${original}"   //
         return `
           <a class="gallery__item" 
             href="${original}">
