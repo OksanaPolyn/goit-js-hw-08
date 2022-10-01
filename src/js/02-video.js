@@ -1,6 +1,6 @@
 import '../css/common.css';
 import Player from '@vimeo/player';
-import  throttle  from 'lodash.throttle';
+import { throttle } from 'lodash';
 
 const TIME_KEY = 'videoplayer-current-time';
 const iframe = document.querySelector('iframe');
@@ -10,7 +10,7 @@ const onPlay = function (data) {
   const strigifyData = JSON.stringify(data);
   localStorage.setItem(TIME_KEY, strigifyData);
 };
-player.on('timeupdate', throttle(onPlay, 1000));   //параметр (onPlay)  з throttle 
+player.on('timeupdate', throttle(onPlay, 1000));
 
 function resumePlayback() {
   const savedTime = localStorage.getItem(TIME_KEY);
@@ -26,5 +26,5 @@ resumePlayback();
 
 
 
-//  ссылка с кодом //
-//  https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror -->
+// //  ссылка с кодом //
+// //  https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror -->
